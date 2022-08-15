@@ -37,7 +37,7 @@ function verifyCheckout() {
 
     // regurlar expression to check for visa card numbers
 
-    const regexCreditNum = /\d{4}-?\d{4}-?\d{4}-?\d{4}/;
+    const regexCreditNum = /^((4\d{3})|(5[1-5]\d{2})|(6011))-?\d{4}-?\d{4}-?\d{4}|3[4,7]\d{13}$/;
     const regexCreditExpiration = /^((0[1-9])|(1[0-2]))\/(\d{2})$/;
     const regexCvc = /^([0-9]{3,4})$/;
 
@@ -160,27 +160,23 @@ function verifyPromoCode() {
 }
 
 // on click of any tip button, will populate tip field with desired tip %
-function tipFunction() {
-    subtotalValue = parseFloat(localStorage.getItem('totalOrdered'));
-    let num = subtotalValue;
-    // tip 10%
-    document.getElementById('tip10').addEventListener('click', () => {
-        document.getElementById("tipField").value = parseFloat((subtotalValue * 0.10)).toFixed(2);
-        total_with_tax();
-    });
-    // tip 15%
-    document.getElementById('tip15').addEventListener('click', () => {
-        document.getElementById("tipField").value = parseFloat((subtotalValue * 0.15)).toFixed(2);
-        total_with_tax()
-    });
-    // tip 20%
-    document.getElementById('tip20').addEventListener('click', () => {
-        document.getElementById("tipField").value = parseFloat((subtotalValue * 0.20)).toFixed(2);
-        total_with_tax()
-    });
-
-
-}
+subtotalValue = parseFloat(localStorage.getItem('totalOrdered'));
+let num = subtotalValue;
+// tip 10%
+document.getElementById('tip10').addEventListener('click', () => {
+    document.getElementById("tipField").value = parseFloat((subtotalValue * 0.10)).toFixed(2);
+    total_with_tax();
+});
+// tip 15%
+document.getElementById('tip15').addEventListener('click', () => {
+    document.getElementById("tipField").value = parseFloat((subtotalValue * 0.15)).toFixed(2);
+    total_with_tax()
+});
+// tip 20%
+document.getElementById('tip20').addEventListener('click', () => {
+    document.getElementById("tipField").value = parseFloat((subtotalValue * 0.20)).toFixed(2);
+    total_with_tax()
+});
 
 // determing the total taxes
 function total_with_tax() {
@@ -235,12 +231,6 @@ function total_with_tax() {
         }
     }
 }
-
-
-
-
-
-
 
 
 
