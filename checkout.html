@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="styles/main.css" rel="stylesheet"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <script src="scripts/script.js"></script>
+        <script src="scripts/script.js" defer></script>
         <script src="scripts/checkoutComplete.js"></script>
         <script src="scripts/orderDetails.js"></script>
     </head>
@@ -99,10 +99,10 @@
 </header>  
 
         
-<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="on"
+<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off"
 onsubmit="return verifyCheckout();" onreset="location.reload();"  style="background-color:#fff8bca7;">
 <div class="page">
-<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="on" onsubmit="return verifyCheckout();" onreset="location.reload();">
+<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off" onsubmit="return verifyCheckout();" onreset="location.reload();">
     <div class="page">
         <table>
             <!-- Order -->
@@ -292,9 +292,9 @@ onsubmit="return verifyCheckout();" onreset="location.reload();"  style="backgro
             <tr>
                 <td>
                     Tip
-                    <input type="button" value="10%" onclick="tipFunction()" id="tip10">
-                    <input type="button" value="15%" onclick="tipFunction()" id="tip15">
-                    <input type="button" value="20%" onclick="tipFunction()" id="tip20">
+                    <input type="button" value="10%"  id="tip10">
+                    <input type="button" value="15%"  id="tip15">
+                    <input type="button" value="20%" id="tip20">
                 </td>
                 <td>
                     <input type="number" min="0" step="0.01" id="tipField">
