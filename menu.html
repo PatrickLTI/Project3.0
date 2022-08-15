@@ -114,57 +114,71 @@ position: absolute; right: 30px; top:65px;">
     <main id="top" style="background-color:#fff8bca7;">
 <!-- Restaurant Name Banner -->
         <div class="container position-relative rounded shadow" id="header_image">
-            <div id="div-title" class="position-absolute top-50 start-50 translate-middle bg-light bg-opacity-75 p-3 rounded-4 shadow text-center">
-                <h1 class="fs-1" >Menu</h1>
+            <div id="div-title" class="position-absolute top-50 start-50 translate-middle p-3 rounded-4 shadow text-center"
+            style="height:100%; width: 60%; background-color:rgba(255, 255, 255, 0.885)">
+                <h1>Menu</h1>
+                <table style="border-top: 1px solid gray; border-bottom: 1px solid gray; position: absolute; left: 0px; width: 100%;
+                font-size:large;"> 
+                    <tr>
+                        <td style="position: absolute; left: 0%; padding: 5px; width: 33%; text-align: left;" 
+                            >
+                            <a href="#appetizers" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Appetizers</a>
+                        </td>
+                        <td style="padding: 10px; padding: 5px; width: 33%; text-align: center;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            <a href="#SALAD" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Salad</a>
+                        </td>
+                        <td style="position: absolute; right: 0%; padding: 5px; width: 33%; text-align: right;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            <a href="#soups" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Soups</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="position: absolute; left: 0%; padding: 5px; width: 33%; text-align: left;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            <a href="#maindishes" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Main</a>
+                        </td>
+                        <td style="position: relative; left: 0%; padding: 5px; width: 33%; text-align: center;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            <a href="#desserts" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Desserts</a>
+                            </td>
+                        <td style="position: absolute; right: 0%; padding: 5px; width: 33%; text-align: right;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            <a href="#extras" style="
+                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            color:#000000ec; text-decoration: none;" 
+                            onMouseOver="this.style.color='#572f24e4'" onMouseOut="this.style.color='#000000e1'">
+                            Extras</a>
+                        </td>
+                    </tr>
+                    <br>
+                </table>
+                
+                
+                
             </div>
         </div> 
 <!-- Meal Type Navbar -->
-        <div style="margin-left:33%; padding-top: 9px;" > 
-            <nav class="navbar navbar-expand-lg">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
-                style="margin-left:20%; border-color:#371e17e4;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse position-relative" id="navbarNavDropdown">
-                    <ul class="navbar-nav fs-4 fw-bold" style="width:30%; text-align:center; margin-left: 40px;" >
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link active" aria-current="page" href="#appetizers"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">APPETIZERS</a>
-                        </li>
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link" href="#SALAD"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">SALAD</a>
-                        </li>
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link" href="#soups"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">SOUPS</a>
-                        </li>
-                    
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link" href="#maindishes"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">MAIN DISHES</a>
-                        </li>
-
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link" href="#desserts"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">DESSERTS</a>
-                        </li>
-
-                        <li class="nav-item" style = "font-size: 75%; font-weight:lighter; padding: 5px; vertical-align: middle;
-                            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                            <a class="nav-link" href="#extras"
-                            style="color:#5d5d5dda" onMouseOver="this.style.color='#371e17e4'" onMouseOut="this.style.color='#5d5d5dda'">EXTRAS</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div> 
-
         <hr style="color:#5d5d5da0; margin:6px;">
 
         <!-- menu for APPERIZERS -->
