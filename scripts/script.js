@@ -37,7 +37,7 @@ function verifyCheckout() {
 
     // regurlar expression to check for visa card numbers
 
-    const regexCreditNum = /^((4\d{3})|(5[1-5]\d{2})|(6011))-?\d{4}-?\d{4}-?\d{4}|3[4,7]\d{13}$/;
+    const regexCreditNum = /^((?:4\d{3})|(?:5[1-5]\d{2})|(?:6011)|(?:3[68]\d{2})|(?:30[012345]\d))[ -]?(\d{4})[ -]?(\d{4})[ -]?(\d{4}|3[4,7]\d{13})$/;
     const regexCreditExpiration = /^((0[1-9])|(1[0-2]))\/(\d{2})$/;
     const regexCvc = /^([0-9]{3,4})$/;
 
@@ -127,8 +127,9 @@ function verifyCheckout() {
         setTimeout(() => alert("Please enter a valid last name"), 1000);
         return false
     }
-    return true;
+   location.href='checkoutComplete.html';
 
+    return true;
 }
 
 // Order Summary
@@ -207,27 +208,27 @@ function total_with_tax() {
     if (isNaN(tipAmount)) {
         if (isNaN(promoAmount)) {
             const total = num + taxValue5 + taxValue10;
-            return document.getElementById('totalField').innerHTML = total.toFixed(2);
+            return document.getElementById('totalField').innerHTML = `$${total.toFixed(2)}`;
         }
         else {
             num = num + promoAmount;
             taxValue5 = num * 0.05;
             taxValue10 = num * 0.10;
             const total = num + taxValue10 + taxValue5;
-            return document.getElementById('totalField').innerHTML = total.toFixed(2);
+            return document.getElementById('totalField').innerHTML = `$${total.toFixed(2)}`;
         }
     }
     else if (tipAmount != NaN) {
         if (isNaN(promoAmount)) {       
             const total = num + taxValue10 + taxValue5 + tipAmount;
-            return document.getElementById('totalField').innerHTML = total.toFixed(2);
+            return document.getElementById('totalField').innerHTML = `$${total.toFixed(2)}`;
         } 
         else {
             num = num + promoAmount;
             taxValue5 = num * 0.05;
             taxValue10 = num * 0.10;
             const total = num + taxValue10 + taxValue5 + tipAmount;
-            return document.getElementById('totalField').innerHTML = total.toFixed(2);
+            return document.getElementById('totalField').innerHTML = `$${total.toFixed(2)}`;
         }
     }
 }
@@ -237,8 +238,4 @@ function total_with_tax() {
 
 
 
-//after submit checkout form, delete the order array and order total form local storage
-document.getElementById('checkout').addEventListener('submit', ()=>{
-    localStorage.removeItem('orderArrayJSON');
-    localStorage.removeItem('totalOrdered');
-})
+

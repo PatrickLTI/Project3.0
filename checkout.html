@@ -100,9 +100,9 @@
 
         
 <form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off"
-onsubmit="return verifyCheckout();" onreset="location.reload();"  style="background-color:#fff8bca7;">
+ onreset="location.reload();"  style="background-color:#fff8bca7;">
 <div class="page">
-<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off" onsubmit="return verifyCheckout();" onreset="location.reload();">
+<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off" onreset="location.reload();">
     <div class="page">
         <table>
             <!-- Order -->
@@ -297,7 +297,7 @@ onsubmit="return verifyCheckout();" onreset="location.reload();"  style="backgro
                     <input type="button" value="20%" id="tip20">
                 </td>
                 <td>
-                    <input type="number" min="0" step="0.01" id="tipField">
+                    <input id="tipField">
                 </td>
             </tr>
             <tr class="total">
@@ -310,7 +310,7 @@ onsubmit="return verifyCheckout();" onreset="location.reload();"  style="backgro
             </tr>
             <tr rowspan="2">
                 <td colspan="2">
-                    <input type="submit" value="PLACE ORDER" id="order" onclick="store();">
+                    <input type="button" value="PLACE ORDER" id="order" onclick="store(); return verifyCheckout();">
                 </td>
             </tr>
         </table>

@@ -15,3 +15,10 @@ function store() {
     window.localStorage.setItem(10, document.getElementById("totalField").innerHTML);
     
 }
+
+
+//after submit checkout form, delete the order array and order total form local storage
+document.getElementById('order').addEventListener('submit', ()=>{
+    localStorage.removeItem('orderArrayJSON');
+    localStorage.removeItem('totalOrdered');
+})
