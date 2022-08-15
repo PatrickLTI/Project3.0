@@ -99,11 +99,8 @@
 </header>  
 
         
-<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off"
-onsubmit="return verifyCheckout();" onreset="location.reload();"  style="background-color:#fff8bca7;">
+<form id="checkout" method="post" autocomplete="off" onreset="location.reload();"  style="background-color:#fff8bca7;">
 <div class="page">
-<form id="checkout" method="post" action="checkoutComplete.html" autocomplete="off" onsubmit="return verifyCheckout();" onreset="location.reload();">
-    <div class="page">
         <table>
             <!-- Order -->
             <tr>
@@ -181,8 +178,8 @@ onsubmit="return verifyCheckout();" onreset="location.reload();"  style="backgro
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <label for="time">Pickup Time</label><br>
-                            <input type="time" id="time" name="time"><br>
+                            <label for="time">Pickup Time (11:00 a.m. to 18:00 p.m.)</label><br>
+                            <input type="time" id="time" name="time" min="11:00" max="18:00"><br>
                         </td>
                     </tr>
                 </table>
@@ -310,7 +307,7 @@ onsubmit="return verifyCheckout();" onreset="location.reload();"  style="backgro
             </tr>
             <tr rowspan="2">
                 <td colspan="2">
-                    <input type="submit" value="PLACE ORDER" id="order" onclick="store();">
+                    <input type="button" value="PLACE ORDER" id="order" onclick="store(); return verifyCheckout(); ">
                 </td>
             </tr>
         </table>
